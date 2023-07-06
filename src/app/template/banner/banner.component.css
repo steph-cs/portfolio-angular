@@ -1,0 +1,85 @@
+/*banner profile*/
+* {
+    color: white;
+}
+
+.banner {
+    background: linear-gradient(20deg, black, #0a0a0a, rgb(35 35 35), #6b6b6b, white);
+    padding: 20vw 0px 100px 0;
+    position: relative;
+}
+
+.banner p {
+    letter-spacing: 3px;
+}
+
+.banner .content-profile {
+    align-items: flex-start;
+    position: relative;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+/*btn icon*/
+.banner .btn-profile {
+    position: absolute;
+    bottom: 0px;
+    animation: moveUpDown 2.1s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/*hey profile*/
+.banner .hey-profile {
+    position: absolute;
+    top: -6vw;
+    left: -20%;
+    margin: 10px 0;
+    rotate: -20deg;
+    width: fit-content;
+}
+
+.banner .hey-profile p {
+    display: inline;
+}
+
+.banner .hey-profile p:last-child {
+    animation: hey 800ms alternate infinite;
+}
+
+@keyframes hey {
+    to {
+        opacity: 0;
+    }
+}
+
+/*Small devices*/
+@media only screen and (max-width: 576px) {
+
+    /*banner*/
+    .banner {
+        padding: 150px 0 100px 0;
+    }
+
+    .banner .content-profile {
+        font-size: 7vw;
+        width: 100%;
+    }
+
+    /*hey profile*/
+    .banner .hey-profile {
+        top: -45px;
+        left: 5%;
+    }
+}
