@@ -1,0 +1,60 @@
+/*nav style*/
+
+.navbar {
+    z-index: 5;
+    padding: 0;
+    width: 80%;
+    box-shadow: 0 4px 9px 0px black;
+    border-radius: 50px;
+    margin: 30px auto;
+    background-color: white;
+    position: fixed;
+}
+
+.navbar .navbar-brand {
+    padding: 15px;
+    font-family: "Montagna";
+}
+
+.navbar ul li a {
+    padding: 15px 55px;
+}
+
+.navbar li:hover a {
+    text-decoration: underline 2px;
+}
+
+.navbar ul .active,
+.navbar ul .active a {
+    background-color: #1A1A1A;
+    color: rgb(255, 255, 255);
+    outline: #1A1A1A 3px solid;
+}
+
+/*Small devices*/
+@media only screen and (max-width: 576px) {
+
+    .navbar {
+        width: 90%;
+    }
+}
+
+/*Medium devices*/
+@media only screen and (max-width: 992px) {
+    .navbar {
+        border-radius: 20px;
+    }
+
+    .navbar .container-fluid {
+        padding: 0;
+    }
+
+    .navbar .navbar-toggler {
+        padding: 15px;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .navbar .navbar-toggler:active {
+        outline: 0;
+    }
+}

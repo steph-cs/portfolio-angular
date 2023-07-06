@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "Montagna";
+    src: url(assets/font/MontagnaLTD/MontagnaLTD.otf);
+}
+
+@font-face {
+    font-family: "PTSans";
+    src: url(assets/font/PTSans/PTSans-Regular.ttf);
+}
+
+:root {
+    --primary-color: #1A1A1A;
+    --second-color: #ffffff;
+    --third-color: #000000;
+}
+
+* {
+    font-family: "PTSans";
+}
