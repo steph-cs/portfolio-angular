@@ -1,0 +1,59 @@
+
+section {
+    position: relative;
+    margin: 50px 0;
+}
+
+h2 {
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: calc(2rem + 3vw);
+    z-index: 1;
+}
+
+h2::after,
+h2::before {
+    content: attr(title);
+    z-index: -1;
+    color: #fff;
+    text-shadow: -1px -1px 0 #0000004f, 1px -1px 0 #0000004f, -1px 1px 0 #0000004f, 1px 1px 0 #0000004f;
+    position: absolute;
+}
+
+h2::after {
+    bottom: -2rem;
+    left: -2vw;
+}
+
+h2::before {
+    bottom: 2rem;
+    left: 1vw;
+}
+
+.title {
+    margin: 50px 50px;
+    position: relative;
+}
+
+.title::after{
+    content: "";
+    width: 50%;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-bottom: #000000 3px solid;
+}
+
+/*Small devices*/
+@media only screen and (max-width: 576px) {
+
+    .title span {
+        position: absolute;
+        bottom: 0;
+        right: -60px;
+    }
+
+    .title {
+        margin: 50px 10px;
+    }
+}
