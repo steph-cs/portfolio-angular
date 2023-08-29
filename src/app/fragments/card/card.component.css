@@ -1,0 +1,48 @@
+.card{
+    box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 10px 4px;
+    background-color: #1A1A1A;
+    width: 20rem;
+    border-radius: 30px;
+    border: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.card.active{
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.card:not(.active) *{
+    font-size: 0.8em;
+}
+
+.card:not(.active) .card-img-top{
+    height: 150px;
+}
+
+.card-img-top{
+    height: 200px;
+    overflow: hidden;
+    border-radius: 30px 30px 0 0;
+}
+
+.active {
+    width: 25rem;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

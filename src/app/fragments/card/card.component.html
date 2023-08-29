@@ -1,0 +1,17 @@
+<div class="card mx-3" [ngClass]="{'active': active}">
+    <div class="card-img-top d-flex justify-content-center">
+        <img src="{{linkImage}}" alt="..." height="100%">
+    </div>
+    <div class="card-body text-white">
+        <h5 class="card-title">{{title}}</h5>
+        <p class="card-text">{{description}}</p>
+        <div class=" d-flex justify-content-center align-items-center">
+            <ul class="p-2 d-flex justify-content-center align-items-center flex-wrap">
+                <li *ngFor="let tec of tecnologies" class="m-1 badge rounded-pill text-bg-light mx-2">{{tec}}</li>
+            </ul>
+        </div>
+        <div class="my-2 row justify-content-center">
+            <a href="{{linkPage}}" class="col-6 btn btn-outline-light">See more</a>
+        </div>
+    </div>
+</div>

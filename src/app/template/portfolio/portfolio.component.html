@@ -1,0 +1,37 @@
+<section id="portfolio" class="portfolio">
+    <app-title title="PORTFOLIO"></app-title>
+
+    <div id="carousel" class="carousel pb-3 mb-3" *ngIf="carousel">
+        <div class="carousel-cards d-flex justify-content-center  align-items-center">
+            <div class="carousel-card d-flex justify-content-center" *ngFor="let project of carousel; let i = index">
+                <app-card class="w-100" 
+                    [active]="i === carousel.length%2" 
+                    [linkImage]="project.linkImage"
+                    [title]="project.title" [description]="project.description" [tecnologies]="project.tecnologies"
+                    [linkPage]="project.linkPage">
+                </app-card>
+            </div>
+        </div>
+        <div class="carousel-controls d-flex justify-content-between w-100">
+            <button (click)="prevSlide()"
+                class="btn rounded-circle d-flex justify-content-around align-items-center p-2 m-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+            </button>
+            <button (click)="nextSlide()"
+                class="btn rounded-circle d-flex justify-content-around align-items-center p-2 m-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1A1A1A"
+                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <a href="" class="fw-bold btn btn-outline-dark px-4">More projects...</a>
+    </div>
+</section>
