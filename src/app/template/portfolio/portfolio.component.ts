@@ -22,19 +22,16 @@ export class PortfolioComponent {
     }
 
     nextSlide() {
-        this.activeCard = (this.activeCard + 1) % this.carousel.length;
+        this.activeCard = (this.activeCard + 1) % this.portfolio.length;
 
         this.carousel.shift()
         this.carousel.push(this.portfolio[(this.activeCard + 1) % this.portfolio.length])
-        console.log(this.activeCard)
     }
 
     prevSlide() {
-        this.activeCard = (this.activeCard - (this.activeCard == 0? -2 : 1)) % this.carousel.length
+        this.activeCard = (this.activeCard - (this.activeCard == 0? - (this.portfolio.length -1) : 1)) % this.portfolio.length
 
         this.carousel.pop()
-        this.carousel.unshift(this.portfolio[(this.activeCard - (this.activeCard == 0? -2 : 1)) % this.portfolio.length])
-        
-        console.log(this.activeCard)
+        this.carousel.unshift(this.portfolio[(this.activeCard - (this.activeCard == 0? - (this.portfolio.length -1) : 1)) % this.portfolio.length])
     }
 }
