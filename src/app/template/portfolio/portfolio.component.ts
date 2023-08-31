@@ -15,6 +15,9 @@ export class PortfolioComponent {
 
     constructor() {
         this.carouselInit()
+        setInterval(() => {
+            this.nextSlide(); 
+            }, 10000);
     }
 
     carouselInit() {
