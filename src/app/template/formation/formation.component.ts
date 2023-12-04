@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { formation } from 'src/app/data/formationData';
-import { formationModel } from 'src/app/model/formationModel';
+import { timelineModel } from 'src/app/model/formationModel';
 
 @Component({
   selector: 'app-formation',
@@ -8,6 +8,6 @@ import { formationModel } from 'src/app/model/formationModel';
   styleUrls: ['./formation.component.css']
 })
 export class FormationComponent {
-    formations: formationModel[] = formation
+    formations: timelineModel[] = formation
 
 }

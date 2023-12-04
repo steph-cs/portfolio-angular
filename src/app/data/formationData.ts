@@ -1,6 +1,6 @@
-import { formationModel } from "../model/formationModel";
+import { timelineModel } from "../model/formationModel";
 
-export const formation : formationModel[] = [
+export const formation : timelineModel[] = [
     {
         logo : 'ufsc',
         data: 'JAN 2020 - DEC 2024',

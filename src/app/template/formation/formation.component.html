@@ -1,27 +1,4 @@
-<section id="formation" class="formation">
-    <app-title title="FORMATION"></app-title>
-
-    <main class="w-100 px-3 ">
-        <div class="middle">
-            <span class="square"></span>
-        </div>
-        <div *ngFor="let formation of formations; let i = index" class="formation-infos">
-            
-            <div class="col logo-col">
-                <div class=" formation-logo d-flex justify-content-center align-items-center">
-                    <img [src]="'assets/img/formation/'+formation.logo+'-logo.png'" [alt]="formation.logo"
-                        width="40px">
-                </div>
-            </div>
-            <div class="col date-col">
-                <div class="formation-date text-white rounded-pill px-2 py-1">{{formation.data}}</div>
-            </div>
-            <div class="formation-infos-text col">
-                <p>{{formation.title}}</p>
-                <p>{{formation.institution}}</p>
-                <div *ngIf="formation.duration" class="rounded px-2 py-1 formation-duration">{{formation.duration}}
-                </div>
-            </div>
-        </div>
-    </main>
-</section>
+<app-timeline
+timelineTitle="Formation"
+[timelineData]="formations"
+></app-timeline>

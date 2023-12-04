@@ -1,4 +1,4 @@
-export interface formationModel {
+export interface timelineModel {
     logo: string,
     data: string,
     title: string,
