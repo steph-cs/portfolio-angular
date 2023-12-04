@@ -1,0 +1,116 @@
+main {
+    position: relative;
+}
+
+
+.formation-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 40px 10px 40px 30px;
+}
+
+.formation-infos-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.formation-logo {
+    border: 1px var(--third-color) solid;
+    box-shadow: var(--third-color) 2px 3px 8px;
+    width: 50px;
+    height: 50px;
+    rotate: 45deg;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.formation-logo img {
+    rotate: -45deg;
+}
+
+.formation-date {
+    background-color: var(--primary-color);
+    margin: 15px 15px 15px 0;
+
+}
+
+.formation-duration {
+    border: 1px var(--primary-color) solid;
+}
+
+.formation-date,
+.formation-duration {
+    width: fit-content;
+    height: fit-content;
+}
+
+@media screen and (min-width: 992px) {
+
+    .square {
+        display: block;
+        background-color: var(--primary-color);
+        width: 32px;
+        height: 32px;
+        rotate: 45deg;
+    }
+
+    .middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .middle::before {
+        z-index: -1;
+        left: 50%;
+        top: 0;
+        content: "";
+        border-left: 2px var(--primary-color) dashed;
+        height: 100%;
+        width: 2px;
+        position: absolute;
+    }
+
+    .formation-infos {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+    }
+
+    .formation-infos:nth-child(odd) {
+        flex-direction: row-reverse;
+        text-align: end;
+    }
+
+    .formation-infos:nth-child(odd) .formation-infos-col{
+        flex-direction: row-reverse;
+        justify-content: start;
+    }
+
+    .formation-infos:nth-child(odd) .formation-duration{
+        float: right;
+    }
+
+    .formation-infos:nth-child(odd) .logo-col{
+        justify-content: start;
+    }
+
+    .formation-infos-col {
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .date-col {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo-col {
+        display: flex;
+        justify-content: end;
+    }
+}

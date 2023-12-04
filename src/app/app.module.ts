@@ -9,6 +9,7 @@ import { ProfileComponent } from './template/profile/profile.component';
 import { PortfolioComponent } from './template/portfolio/portfolio.component';
 import { TitleComponent } from './fragments/title/title.component';
 import { CardComponent } from './fragments/card/card.component';
+import { FormationComponent } from './template/formation/formation.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CardComponent } from './fragments/card/card.component';
     ProfileComponent,
     PortfolioComponent,
     TitleComponent,
-    CardComponent
+    CardComponent,
+    FormationComponent
   ],
   imports: [
     BrowserModule,
