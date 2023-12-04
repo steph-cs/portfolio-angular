@@ -2,7 +2,7 @@
 
 Status: 🚧 Em andamento 🚧
 <p>
-Acesso em: <a href="https://steph-cs.github.io/portfolio-angular/" target="_blank">https://steph-cs.github.io/portfolio-angular/</a>.
+Acesso em: <a href="https://portfolio-angular-ruby.vercel.app/" target="_blank">https://portfolio-angular-ruby.vercel.app/</a>.
 </p>
 
 ## ✔️ Tecnologias utilizadas
