@@ -9,6 +9,13 @@ export const portfolio: cardCarouselModel[] = [
         linkPage: 'https://github.com/steph-cs/conversor-de-moedas-residencia-iuul'
     },
     {
+        linkImage: 'assets/img/portfolio/rickandmorty.jpg',
+        title:'Rick and Morty Angular',
+        description: 'Angular application for listing and describing characters, locations, and episodes from the TV show Rick And Morty. The application consumes the API: https://rickandmortyapi.com/. ...',
+        tecnologies: ['Angular', 'TypeScript', 'HTML', 'CSS'],
+        linkPage: 'https://github.com/steph-cs/rick-and-morty-angular'
+    },
+    {
         linkImage: 'assets/img/portfolio/pokedex.jpeg',
         title:'Pokedex',
         description: 'A JavaScript application for listing Pokémon. The application consumes the PokeApi: https://pokeapi.co/. This project aims to practice JavaScript language skills and service consumption. ...',
