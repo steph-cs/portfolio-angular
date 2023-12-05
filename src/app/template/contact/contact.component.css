@@ -48,6 +48,11 @@
     box-shadow: none;
 }
 
+.form-label.required::after{
+    content: "*";
+    color: rgb(167, 16, 16);
+    margin: 0 5px;
+}
 
 @media only screen and (min-width: 992px) {
 
