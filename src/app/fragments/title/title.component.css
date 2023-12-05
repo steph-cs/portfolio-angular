@@ -4,21 +4,40 @@ section {
     margin: 50px 0;
 }
 
+.primary{
+    color: var(--primary-color);
+}
+
+.second{
+    color: var(--second-color);
+}
+
 h2 {
     position: relative;
-    color: rgb(0, 0, 0);
     font-weight: bolder;
     font-size: calc(2rem + 3vw);
     z-index: 1;
 }
 
 h2::after,
-h2::before {
+h2::before{
     content: attr(title);
     z-index: -1;
-    color: #fff;
-    text-shadow: -1px -1px 0 #0000004f, 1px -1px 0 #0000004f, -1px 1px 0 #0000004f, 1px 1px 0 #0000004f;
     position: absolute;
+    opacity: 0.5;
+}
+
+
+.primary::after,
+.primary::before {
+    color: var(--second-color);
+    text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color), -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color);
+}
+
+.second::after,
+.second::before {
+    color: var(--primary-color);
+    text-shadow: -1px -1px 0 var(--second-color), 1px -1px 0 var(--second-color), -1px 1px 0 var(--second-color), 1px 1px 0 var(--second-color);
 }
 
 h2::after {
@@ -41,7 +60,14 @@ h2::before {
     width: 50%;
     margin-bottom: 20px;
     margin-left: 20px;
-    border-bottom: #000000 3px solid;
+}
+
+.title:has(.primary)::after{
+    border-bottom: var(--primary-color) 3px solid;
+}
+
+.title:has(.second)::after{
+    border-bottom: var(--second-color) 3px solid;
 }
 
 /*Small devices*/

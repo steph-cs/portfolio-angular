@@ -1,0 +1,58 @@
+.contact {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+}
+
+*.contact {
+    color: var(--second-color);
+}
+
+.subtitle {
+    position: relative;
+    font-style: italic;
+}
+
+.subtitle::after,
+.subtitle::before {
+    content: "";
+    top: 50%;
+    position: absolute;
+    width: 30vw;
+    border-bottom: white 1px solid;
+}
+
+.subtitle::after {
+    right: 0;
+}
+
+.subtitle::before {
+    left: 0;
+}
+
+.form-control {
+    color: white;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+}
+
+.form-control#message {
+    border: 1px solid white;
+    resize: none;
+}
+
+.form-control:focus {
+    border: none;
+    border-bottom: 1px solid white;
+    box-shadow: none;
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    .subtitle::after,
+    .subtitle::before {
+        width: 40vw;
+    }
+}

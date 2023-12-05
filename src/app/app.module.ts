@@ -12,6 +12,7 @@ import { CardComponent } from './fragments/card/card.component';
 import { FormationComponent } from './template/formation/formation.component';
 import { ExperienceComponent } from './template/experience/experience.component';
 import { TimelineComponent } from './fragments/timeline/timeline.component';
+import { ContactComponent } from './template/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TimelineComponent } from './fragments/timeline/timeline.component';
     CardComponent,
     FormationComponent,
     ExperienceComponent,
-    TimelineComponent
+    TimelineComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
