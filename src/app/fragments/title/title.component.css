@@ -17,6 +17,7 @@ h2 {
     font-weight: bolder;
     font-size: calc(2rem + 3vw);
     z-index: 1;
+    text-transform: uppercase;
 }
 
 h2::after,
