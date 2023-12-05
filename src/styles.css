@@ -19,3 +19,7 @@
 * {
     font-family: "PTSans";
 }
+
+section:not([id="home"]){
+    margin-top: 100px;
+}
