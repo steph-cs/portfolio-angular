@@ -2,7 +2,7 @@
 
 Status: 🚧 Em andamento 🚧
 <p>
-Acesso em: <a href="https://portfolio-angular-ruby.vercel.app/" target="_blank">https://portfolio-angular-ruby.vercel.app/</a>.
+Acesso em: <a href="https://stephanie-cs.vercel.app/" target="_blank">https://stephanie-cs.vercel.app/</a>.
 </p>
 
 ## ✔️ Tecnologias utilizadas
