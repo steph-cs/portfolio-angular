@@ -6,10 +6,11 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-    @Input() active: boolean = false
+    @Input() status = '';
     @Input() linkImage = ''
     @Input() title = ''
     @Input() description = ''
     @Input() tecnologies: string[] = []
     @Input() linkPage = ''
+    @Input() linkRepo = ''
 } 

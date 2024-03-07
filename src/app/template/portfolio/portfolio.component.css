@@ -3,32 +3,3 @@
 * {
     color: black;
 }
-
-.carousel {
-    position: relative;
-    overflow: hidden;
-    border-bottom: #1A1A1A 1px solid;
-}
-
-.carousel-cards {
-    margin: 30px;
-}
-
-.carousel-controls {
-    position: absolute;
-    top: calc(50% - 32px);
-    z-index: 15;
-}
-
-.carousel-controls .btn {
-    box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 10px 4px;
-    background-color: white;
-}
-
-.carousel-controls .btn:hover {
-    background-color: #1A1A1A;
-}
-
-.carousel-controls .btn:hover svg {
-    fill: white;
-}
