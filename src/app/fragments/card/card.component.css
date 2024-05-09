@@ -1,15 +1,31 @@
-.portfolio-card{
-    box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 10px 4px;
-    background-color: #1A1A1A;
-    width: 20rem;
-    border-radius: 30px;
-    border: none;
+.portfolio-card {
+  box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 10px 4px;
+  background-color: #1a1a1a;
+  width: 20rem;
+  border-radius: 30px;
+  border: none;
 }
 
-.portfolio-card-img{
-    min-height: 360px;
-    border-radius: 30px ;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.portfolio-card-img {
+  min-height: 360px;
+  border-radius: 30px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.link-repo {
+  color: var(--second-color);
+}
+
+.link-repo:hover {
+  color: var(--third-color);
+}
+
+.btn.btn-outline-light:hover {
+  position: relative;
+  transition: all 250ms ease-in-out;
+  box-shadow: 5px 5px 0px #6f6f6f, 10px 10px 0px #3a3a3a, 15px 15px 0px #272727;
+  top: -5px;
+  left: -5px;
 }
