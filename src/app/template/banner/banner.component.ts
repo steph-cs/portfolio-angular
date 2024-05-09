@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class BannerComponent {
 
+  ngOnInit(): void {
+    this.type()
+  }
+
+  type() {
+    const magicElements = document.querySelectorAll('.typewriter-words');
+    magicElements.forEach((element: any) => {
+      element.classList.toggle('alternate');
+    });
+    setTimeout(() => {
+      magicElements.forEach((element: any) => {
+        element.classList.toggle('alternate');
+      });
+      setTimeout(() => {
+        this.type();
+      }, 6000);
+    }, 6000);
+  }
 }

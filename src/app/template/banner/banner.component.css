@@ -1,85 +1,141 @@
 /*banner profile*/
 * {
-    color: white;
+  color: white;
 }
 
 .banner {
-    background: linear-gradient(20deg, black, #0a0a0a, rgb(35 35 35), #6b6b6b, white);
-    padding: 20vw 0px 100px 0;
-    position: relative;
+  background: linear-gradient(
+    20deg,
+    black,
+    #0a0a0a,
+    rgb(35 35 35),
+    #6b6b6b,
+    white
+  );
+  padding: 25vw 0px 100px 0;
+  position: relative;
+}
+
+.banner-text {
+  width: 100%;
 }
 
 .banner p {
-    letter-spacing: 3px;
+  letter-spacing: 3px;
 }
 
 .banner .content-profile {
-    align-items: flex-start;
-    position: relative;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 4vw;
+  position: relative;
+  font-weight: bold;
+  font-size: 4vw;
+  width: 50vw;
 }
 
 /*btn icon*/
 .banner .btn-profile {
-    position: absolute;
-    bottom: 0px;
-    animation: moveUpDown 2.1s ease-in-out infinite;
+  width: 6em;
+  position: absolute;
+  bottom: 0px;
+  animation: moveUpDown 2.1s ease-in-out infinite;
 }
 
 @keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /*hey profile*/
 .banner .hey-profile {
-    position: absolute;
-    top: -6vw;
-    left: -20%;
-    margin: 10px 0;
-    rotate: -20deg;
-    width: fit-content;
+  position: absolute;
+  top: -7vw;
+  left: -15%;
+  margin: 10px 0;
+  rotate: -20deg;
+  width: fit-content;
 }
 
 .banner .hey-profile p {
-    display: inline;
+  display: inline;
 }
 
 .banner .hey-profile p:last-child {
-    animation: hey 800ms alternate infinite;
+  animation: hey 800ms alternate infinite;
 }
 
 @keyframes hey {
-    to {
-        opacity: 0;
-    }
+  to {
+    opacity: 0;
+  }
+}
+
+.typewriter-words {
+  color: var(--primary-color);
+  text-shadow: -1px -1px 0 var(--second-color), 1px -1px 0 var(--second-color),
+    -1px 1px 0 var(--second-color), 1px 1px 0 var(--second-color);
+  white-space: nowrap;
+  display: inline-block;
+  width: 0%;
+  font-size: 6vw;
+  font-family: monospace;
+  letter-spacing: 3px;
+  border-right: 3px #ffffff solid;
+  overflow: hidden;
+  animation: cursor 0.7s step-end infinite alternate;
+}
+.typewriter {
+  width: fit-content;
+}
+
+.typewriter-words:not(.alternate) {
+  animation: typing 3s steps(20) alternate forwards 2,
+    cursor 0.7s step-end infinite alternate;
+}
+.typewriter-words.alternate {
+  display: none;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  to {
+    width: 100%;
+  }
 }
 
 /*Small devices*/
 @media only screen and (max-width: 576px) {
+  /*banner*/
+  .banner {
+    padding: 55vw 0 110px 0;
+  }
 
-    /*banner*/
-    .banner {
-        padding: 150px 0 100px 0;
-    }
+  .banner .content-profile {
+    font-size: 7vw;
+  }
 
-    .banner .content-profile {
-        font-size: 7vw;
-        width: 100%;
-    }
+  .banner .content-profile {
+    width: 90vw;
+  }
+  .typewriter-words {
+    font-size: 9vw;
+  }
+  /*hey profile*/
+  .banner .hey-profile {
+    top: -70px;
+    left: 0;
+  }
 
-    /*hey profile*/
-    .banner .hey-profile {
-        top: -45px;
-        left: 5%;
-    }
+  /*btn icon*/
+  .banner .btn-profile {
+    width: 5em;
+  }
 }
