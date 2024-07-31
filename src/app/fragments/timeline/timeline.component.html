@@ -6,19 +6,21 @@
             <span class="square"></span>
         </div>
         <div *ngFor="let timeline of timelineData; let i = index" class="timeline-infos">
-            
+
             <div class="col logo-col">
                 <div class=" timeline-logo d-flex justify-content-center align-items-center">
                     <img [src]="'assets/img/timeline/'+timeline.logo+'-logo.png'" [alt]="timeline.logo"
-                        width="40px">
+                        width="50px">
                 </div>
             </div>
             <div class="col date-col">
                 <div class="timeline-date text-white rounded-pill px-4 py-2">{{timeline.data}}</div>
             </div>
             <div class="timeline-infos-text col">
-                <p>{{timeline.title}}</p>
+                <p class="fw-bold">{{timeline.title}}</p>
                 <p>{{timeline.institution}}</p>
+                <div *ngIf="timeline.description">{{timeline.description}}
+                </div>
                 <div *ngIf="timeline.duration" class="rounded px-2 py-1 timeline-duration">{{timeline.duration}}
                 </div>
             </div>

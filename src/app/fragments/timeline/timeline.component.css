@@ -18,18 +18,15 @@ main {
 }
 
 .timeline-logo {
-    border: 1px var(--third-color) solid;
+    border-radius: 100%;
     box-shadow: var(--third-color) 2px 3px 8px;
-    width: 60px;
-    height: 60px;
-    rotate: 45deg;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
     margin: 10px 0;
     overflow: hidden;
 }
 
-.timeline-logo img {
-    rotate: -45deg;
-}
 
 .timeline-date {
     background-color: var(--primary-color);
