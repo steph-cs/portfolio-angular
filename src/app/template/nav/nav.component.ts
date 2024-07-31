@@ -7,7 +7,7 @@ import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-    activeSection: string | null = null;
+    activeSection: string | null = 'home';
 
     constructor(private el: ElementRef) { }
 

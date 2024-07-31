@@ -1,68 +1,79 @@
 /*nav style*/
 
 .navbar {
-    z-index: 5;
-    padding: 0;
-    width: 90%;
-    box-shadow: 0 4px 9px 0px black;
-    border-radius: 50px;
-    margin: 30px auto;
-    background-color: white;
-    position: fixed;
+  z-index: 5;
+  padding: 0;
+  width: 90%;
+  box-shadow: 0 4px 9px 0px black;
+  border-radius: 50px;
+  margin: 30px auto;
+  background-color: white;
+  position: fixed;
 }
 
-.container-fluid{
-    padding: 0;
+.container-fluid {
+  padding: 0;
 }
 
 .navbar .navbar-brand {
-    padding: 15px 25px;
-    font-family: "Montagna";
+  padding: 0 25px;
+  font-family: "Montagna";
 }
 
+.navbar ul li {
+  position: relative;
+  overflow: hidden;
+}
 .navbar ul li a {
-    padding: 15px 55px;
+  padding: 15px 2.5vw;
+  transition: color 0.3s ease;
 }
 
-.navbar li:hover a {
-    text-decoration: underline 2px;
+.navbar li a::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  transition: left 0.8s ease;
+  z-index: -1;
 }
 
-.navbar li:last-child a{
-    border-radius: 0 50px 50px 0;
+.navbar li a:hover {
+  color: #fff;
+}
+
+.navbar li a:hover::before {
+  left: 0;
 }
 
 .navbar ul .active,
 .navbar ul .active a {
-    background-color: #1A1A1A;
-    color: rgb(255, 255, 255);
-    outline: #1A1A1A 3px solid;
+  background-color: #1a1a1a;
+  color: rgb(255, 255, 255);
 }
 
 /*Small devices*/
 @media only screen and (max-width: 576px) {
-
-    .navbar {
-        width: 90%;
-    }
+  .navbar {
+    width: 90%;
+  }
 }
 
 /*Medium devices*/
 @media only screen and (max-width: 992px) {
-    .navbar {
-        border-radius: 20px;
-    }
+  .navbar {
+    border-radius: 20px;
+  }
 
-    .navbar .container-fluid {
-        padding: 0;
-    }
+  .navbar .navbar-toggler {
+    padding: 15px;
+    border-radius: 0 20px 20px 0;
+  }
 
-    .navbar .navbar-toggler {
-        padding: 15px;
-        border-radius: 0 20px 20px 0;
-    }
-
-    .navbar .navbar-toggler:active {
-        outline: 0;
-    }
+  .navbar .navbar-toggler:active {
+    outline: 0;
+  }
 }
