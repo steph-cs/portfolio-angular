@@ -12,7 +12,7 @@
     #6b6b6b,
     white
   );
-  padding: 25vw 0px 100px 0;
+  padding: calc(16vw + 50px) 0px 100px 0;
   position: relative;
 }
 
@@ -115,7 +115,7 @@
 @media only screen and (max-width: 576px) {
   /*banner*/
   .banner {
-    padding: 55vw 0 110px 0;
+    padding: calc(40vw + 50px) 0 110px 0;
   }
 
   .banner .content-profile {
