@@ -1,66 +1,80 @@
 /*profile*/
 
 * {
-    color: black;
-}
-
-/*image*/
-.profile #img-profile {
-    border-radius: 50%;
-    filter: drop-shadow(0 0 4px #000000);
+  color: black;
 }
 
 /*container*/
 .profile-container {
-    overflow: hidden;
-    margin: 0;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 /*content*/
 .content-profile {
-    position: relative;
-    margin: 50px 0;
+  position: relative;
+  margin: 50px 0;
 }
 
 .content-profile p {
-    font-size: calc(12px + 0.3vw);
+  font-size: calc(12px + 0.3vw);
 }
 
 .content-profile span {
-    display: block;
-    position: absolute;
-    right: -100px;
-    width: 100%;
-    margin: 20px 0 0 20px;
-    border-bottom: #000000 3px solid;
+  display: block;
+  position: absolute;
+  right: -100px;
+  width: 100%;
+  margin: 20px 0 0 20px;
+  border-bottom: #000000 3px solid;
 }
 
 /*line*/
 .line-profile {
-    position: relative;
-    font-weight: bolder;
-    padding: 30px 0;
+  position: relative;
+  font-weight: bolder;
+  padding: 30px 0;
 }
 
 .line-profile p {
-    margin: 0;
+  margin: 0;
 }
 
 .line-profile p::after,
 .line-profile p::before {
-    content: attr(data-text);
-    z-index: -1;
-    color: #fff;
-    text-shadow: -1px -1px 0 #0000004f, 1px -1px 0 #0000004f, -1px 1px 0 #0000004f, 1px 1px 0 #0000004f;
-    position: absolute;
+  content: attr(data-text);
+  text-wrap: nowrap;
+  z-index: -1;
+  color: #fff;
+  text-shadow: -1px -1px 0 #0000004f, 1px -1px 0 #0000004f, -1px 1px 0 #0000004f,
+    1px 1px 0 #0000004f;
+  position: absolute;
 }
 
 .line-profile p::after {
-    right: -130px;
-    bottom: -10px;
+  bottom: -10px;
+  animation: moveTextL 10s infinite linear;
 }
 
 .line-profile p::before {
-    left: -100px;
-    top: -10px;
+  top: -10px;
+  animation: moveTextR 10s infinite linear;
+}
+
+@keyframes moveTextR {
+  0% {
+    right: 90vw;
+  }
+  100% {
+    right: -50vw;
+  }
+}
+
+@keyframes moveTextL {
+  0% {
+    right: -50vw;
+  }
+  100% {
+    right: 90vw;
+  }
 }
