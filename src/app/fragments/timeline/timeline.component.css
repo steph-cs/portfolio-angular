@@ -13,7 +13,7 @@ main {
 .timeline-infos-col {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -108,6 +108,6 @@ main {
 
     .logo-col {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
     }
 }

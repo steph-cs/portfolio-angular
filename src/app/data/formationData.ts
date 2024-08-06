@@ -1,25 +1,58 @@
-import { timelineModel } from "../model/formationModel";
-
-export const formation : timelineModel[] = [
-    {
-        logo : 'ufsc',
+export const formationData = {
+  EN: {
+    sectionTitle: 'formation',
+    sectionId: 'formation',
+    formationData: [
+      {
+        logo: 'ufsc',
         data: 'JAN 2020 - DEC 2024',
         title: 'Degree in Information Systems',
         institution: 'Universidade Federal de Santa Catarina - UFSC',
-        duration: ''
-    },
-    {
-        logo : 'ifood',
+        duration: '',
+      },
+      {
+        logo: 'ifood',
         data: 'MAI 2023 - APR 2023',
-        title: 'Course Power Tech Angular Developer - Powered by iFood',
+        title: 'Bootcamp Power Tech Angular Developer - Powered by iFood',
         institution: 'Digital Innovation One - DIO',
-        duration: '75 hrs' 
-    }, 
-    { 
-        logo : 'iuul',
+        duration: '75 hrs',
+      },
+      {
+        logo: 'iuul',
         data: 'NOV 2022 - MAR 2023',
         title: 'Course Front End Angular/ Typescript Developer - Powered by Ed',
-        institution: 'IUUL / Universidade Federal do Estado do Rio de Janeiro - UNIRIO',
-        duration: '270 hrs'
-    }
-]
+        institution:
+          'IUUL / Universidade Federal do Estado do Rio de Janeiro - UNIRIO',
+        duration: '270 hrs',
+      },
+    ],
+  },
+  PT: {
+    sectionTitle: 'formação',
+    sectionId: 'formation',
+    formationData: [
+      {
+        logo: 'ufsc',
+        data: 'JAN 2020 - DEZ 2024',
+        title: 'Graduação Sistemas de Informação',
+        institution: 'Universidade Federal de Santa Catarina - UFSC',
+        duration: '',
+      },
+      {
+        logo: 'ifood',
+        data: 'MAI 2023 - ABR 2023',
+        title: 'Bootcamp Power Tech Angular Developer - Powered by iFood',
+        institution: 'Digital Innovation One - DIO',
+        duration: '75 hrs',
+      },
+      {
+        logo: 'iuul',
+        data: 'NOV 2022 - MAR 2023',
+        title: 'Curso Front End Angular/ Typescript Developer - Powered by Ed',
+        institution:
+          'IUUL / Universidade Federal do Estado do Rio de Janeiro - UNIRIO',
+        duration: '270 hrs',
+      },
+    ],
+  },
+};

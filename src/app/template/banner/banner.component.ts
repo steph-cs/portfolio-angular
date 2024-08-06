@@ -1,14 +1,22 @@
 import { Component } from '@angular/core';
+import { bannerData } from 'src/app/data/translate';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.css']
+  styleUrls: ['./banner.component.css'],
 })
 export class BannerComponent {
+  bannerData!: bannerData;
+
+  constructor(private languageService: LanguageService) {}
 
   ngOnInit(): void {
-    this.type()
+    this.type();
+    this.languageService.currentLanguage$.subscribe((lang) => {
+      this.bannerData = this.languageService.getBannerData(lang);
+    });
   }
 
   type() {

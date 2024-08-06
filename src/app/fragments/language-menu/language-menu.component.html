@@ -1,0 +1,20 @@
+<div class="language-menu m-2" #menuContainer [class.open]="isOpen">
+  <div
+    (click)="toggleMenu()"
+    class="menu-button border d-flex gap-3 justify-content-center align-items-center"
+  >
+    <i class="fa-solid fa-globe"></i>
+    <div>{{ activeLanguage }}</div>
+  </div>
+
+  <div class="menu-options" [class.border]="isOpen">
+    <a
+      *ngFor="let language of languages"
+      id="{{ language.sigla }}"
+      (click)="changeLanguage($event)"
+      [class.active]="activeLanguage == language.sigla"
+    >
+      {{ language.sigla }} - {{ language.language }}
+    </a>
+  </div>
+</div>

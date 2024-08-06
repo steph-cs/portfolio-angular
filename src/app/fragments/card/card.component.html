@@ -3,7 +3,8 @@
   style="width: 90%"
 >
   <span
-    class="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger" [ngClass]="status != ''? 'd-block': 'd-none'"
+    class="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger"
+    [ngClass]="status != '' ? 'd-block' : 'd-none'"
   >
     {{ status }}
   </span>
@@ -17,17 +18,14 @@
     <div>
       <h5 class="card-title fs-3 fw-bold my-3">{{ title }}</h5>
       <p class="card-text">{{ description }}</p>
-        <ul
-          class="d-flex p-0 flex-wrap"
+      <ul class="d-flex p-0 flex-wrap">
+        <li
+          *ngFor="let tec of tecnologies"
+          class="my-2 badge rounded-pill text-bg-light me-4 px-4 py-2"
         >
-          <li
-            *ngFor="let tec of tecnologies"
-            class="my-2 badge rounded-pill text-bg-light me-4 px-4 py-2"
-          >
-            {{ tec }}
-          </li>
-        </ul>
-      
+          {{ tec }}
+        </li>
+      </ul>
     </div>
 
     <div class="my-2 d-flex justify-content-between">
@@ -35,9 +33,9 @@
         href="{{ linkPage }}"
         target="_blank"
         class="col-8 btn btn-outline-light"
-        >See project</a
+        >{{ button }}</a
       >
-      <a href="{{linkRepo}}" target="_blank" class="col-2 link-repo">
+      <a href="{{ linkRepo }}" target="_blank" class="col-2 link-repo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="36"

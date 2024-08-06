@@ -14,6 +14,7 @@ import { ExperienceComponent } from './template/experience/experience.component'
 import { TimelineComponent } from './fragments/timeline/timeline.component';
 import { ContactComponent } from './template/contact/contact.component';
 import { FooterComponent } from './template/footer/footer.component';
+import { LanguageMenuComponent } from './fragments/language-menu/language-menu.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FooterComponent } from './template/footer/footer.component';
     ExperienceComponent,
     TimelineComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    LanguageMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,7 @@
-export interface timelineModel {
-    logo: string,
-    data: string,
-    title: string,
-    description?: string
-    institution: string,
-    duration: string
+import { timelineModel } from '../model/timelineModel';
+
+export interface formationDataModel {
+  sectionTitle: string;
+  sectionId: string;
+  formationData: timelineModel[];
 }

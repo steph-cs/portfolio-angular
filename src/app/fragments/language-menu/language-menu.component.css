@@ -1,0 +1,53 @@
+.language-menu {
+  position: fixed;
+  top: calc(50vh);
+  right: 0;
+  z-index: 50;
+}
+
+.menu-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  transform: rotate(90deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin-top: 10px;
+  border-radius: 10px;
+
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.menu-options a {
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color:  var(--primary-color);
+}
+
+.menu-options a.active{
+  background-color:  var(--primary-color);
+  color:  var(--second-color);
+}
+
+.menu-options a:not(.active):hover {
+  background-color:  #f5f5f5;
+}
+
+.language-menu.open .menu-button {
+  transform: rotate(0deg);
+}
+
+.language-menu.open .menu-options {
+  max-height: 500px;
+}

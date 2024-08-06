@@ -1,63 +1,52 @@
 .contact {
-    background-color: var(--primary-color);
-    padding: 20px 0;
+  background-color: var(--primary-color);
+  padding: 20px 0;
 }
 
 *.contact {
-    color: var(--second-color);
+  color: var(--second-color);
 }
 
 .subtitle {
-    position: relative;
-    font-style: italic;
+  position: relative;
+  font-style: italic;
 }
 
-.subtitle::after,
-.subtitle::before {
-    content: "";
-    top: 50%;
-    position: absolute;
-    width: 30vw;
-    border-bottom: white 1px solid;
+.subtitle p{
+  background-color: var(--primary-color);
+  padding: 0 10px;
+  z-index: 10;
 }
 
 .subtitle::after {
-    right: 0;
-}
-
-.subtitle::before {
-    left: 0;
+  content: "";
+  top: 50%;
+  position: absolute;
+  width: 100%;
+  border-bottom: white 1px solid;
 }
 
 .form-control {
-    color: white;
-    background-color: transparent;
-    border: 0;
-    border-bottom: 1px solid white;
-    border-radius: 0;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  border-radius: 0;
 }
 
 .form-control#message {
-    border: 1px solid white;
-    resize: none;
+  border: 1px solid white;
+  resize: none;
 }
 
 .form-control:focus {
-    border: none;
-    border-bottom: 1px solid white;
-    box-shadow: none;
+  border: none;
+  border-bottom: 1px solid white;
+  box-shadow: none;
 }
 
-.form-label.required::after{
-    content: "*";
-    color: rgb(167, 16, 16);
-    margin: 0 5px;
-}
-
-@media only screen and (min-width: 992px) {
-
-    .subtitle::after,
-    .subtitle::before {
-        width: 40vw;
-    }
+.form-label.required::after {
+  content: "*";
+  color: rgb(167, 16, 16);
+  margin: 0 5px;
 }

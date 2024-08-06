@@ -1,5 +1,5 @@
-<section id="profile" class="profile">
-  <app-title title="PROFILE"></app-title>
+<section [id]="profileData.sectionId" class="profile">
+  <app-title [title]="profileData.sectionTitle"></app-title>
   <div
     class="profile-container overflow-hidden w-100 row align-items-center justify-content-center"
   >
@@ -10,23 +10,8 @@
     </div>
     <div class="content-profile col-10 col-md-6">
       <div class="text-profile">
-        <p>
-          Hey! I'm Stephanie, a Web Developer and Information Systems
-          undergraduate student at UFSC. My journey is marked by a strong
-          adaptation to new challenges, resilience, and a continuous passion for
-          learning.
-        </p>
-        <p>
-          During my academic journey, I developed skills in technologies such as
-          TypeScript, Angular, React, Node, and others. I participated in
-          extension programs and practical projects that consolidated my
-          technical knowledge and teamwork skills. Currently, I am seeking
-          opportunities to grow in the web development field, focusing on
-          enhancing the skills I already master in both Front-end and Back-end.
-        </p>
-        <p>
-          My commitment is to excellence and continuous learning, always seeking
-          new challenges and opportunities to innovate.
+        <p *ngFor="let text of profileData.profileData">
+          {{ text }}
         </p>
       </div>
       <div class="line-profile">
@@ -39,12 +24,12 @@
       <span></span>
     </div>
     <div class="d-flex gap-4 justify-content-around flex-wrap">
-      <i class="fa-brands fa-html5" style="font-size: 80px"></i>
-      <i class="fa-brands fa-css3-alt" style="font-size: 80px"></i>
-      <i class="fa-brands fa-js" style="font-size: 80px"></i>
-      <i class="fa-brands fa-angular" style="font-size: 80px"></i>
-      <i class="fa-brands fa-react" style="font-size: 80px"></i>
-      <i class="fa-brands fa-figma" style="font-size: 80px"></i>
+      <i class="fa-brands fa-html5" title="HTML5" style="font-size: 80px"></i>
+      <i class="fa-brands fa-css3-alt" title="CSS3" style="font-size: 80px"></i>
+      <i class="fa-brands fa-js" title="Javascript" style="font-size: 80px"></i>
+      <i class="fa-brands fa-angular" title="Angular" style="font-size: 80px"></i>
+      <i class="fa-brands fa-react" title="ReactJs" style="font-size: 80px"></i>
+      <i class="fa-brands fa-figma" title="Figma" style="font-size: 80px"></i>
     </div>
   </div>
 </section>

@@ -1,18 +1,26 @@
-<section id="portfolio" class="portfolio">
-    <app-title title="PORTFOLIO"></app-title>
-
-
-    <app-card *ngFor="let project of portfolio" class="d-flex justify-content-center"
-        [status]="project.status"
-        [linkImage]="project.linkImage"
-        [title]="project.title" [description]="project.description" [tecnologies]="project.tecnologies"
-        [linkPage]="project.linkPage"
-        [linkRepo]="project.linkRepo">
-    </app-card>
-    <div class="d-flex justify-content-center  mt-3" >
-        <div class=" d-flex justify-content-center border-top" style="width: 90%;">
-            <a href="https://github.com/steph-cs" target="_blank" class="fw-bold btn btn-outline-dark px-4 mt-3">More projects...</a>
-        </div>
-        
+<section [id]="portfolioData.sectionId" class="portfolio">
+  <app-title [title]="portfolioData.sectionTitle"></app-title>
+  <app-card
+    *ngFor="let project of portfolioData.portfolioData"
+    class="d-flex justify-content-center"
+    [status]="project.status"
+    [linkImage]="project.linkImage"
+    [title]="project.title"
+    [description]="project.description"
+    [tecnologies]="project.tecnologies"
+    [linkPage]="project.linkPage"
+    [linkRepo]="project.linkRepo"
+    [button]="portfolioData.buttons.project"
+  >
+  </app-card>
+  <div class="d-flex justify-content-center mt-3">
+    <div class="d-flex justify-content-center border-top" style="width: 90%">
+      <a
+        href="https://github.com/steph-cs"
+        target="_blank"
+        class="fw-bold btn btn-outline-dark px-4 mt-3"
+        >{{ portfolioData.buttons.portfolio }}...</a
+      >
     </div>
+  </div>
 </section>

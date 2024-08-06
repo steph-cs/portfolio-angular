@@ -1,86 +1,85 @@
-
 section {
-    position: relative;
-    margin: 50px 0;
+  position: relative;
+  margin: 50px 0;
 }
 
-.primary{
-    color: var(--primary-color);
+.primary {
+  color: var(--primary-color);
 }
 
-.second{
-    color: var(--second-color);
+.second {
+  color: var(--second-color);
 }
 
 h2 {
-    position: relative;
-    font-weight: bolder;
-    font-size: calc(2rem + 3vw);
-    z-index: 1;
-    text-transform: uppercase;
+  position: relative;
+  font-weight: bolder;
+  font-size: calc(2rem + 3vw);
+  z-index: 1;
+  text-transform: uppercase;
 }
 
 h2::after,
-h2::before{
-    content: attr(title);
-    z-index: -1;
-    position: absolute;
-    opacity: 0.5;
+h2::before {
+  content: attr(title);
+  z-index: -1;
+  position: absolute;
+  opacity: 0.5;
 }
-
 
 .primary::after,
 .primary::before {
-    color: var(--second-color);
-    text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color), -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color);
+  color: var(--second-color);
+  text-shadow: -1px -1px 0 var(--primary-color), 1px -1px 0 var(--primary-color),
+    -1px 1px 0 var(--primary-color), 1px 1px 0 var(--primary-color);
 }
 
 .second::after,
 .second::before {
-    color: var(--primary-color);
-    text-shadow: -1px -1px 0 var(--second-color), 1px -1px 0 var(--second-color), -1px 1px 0 var(--second-color), 1px 1px 0 var(--second-color);
+  color: var(--primary-color);
+  text-shadow: -1px -1px 0 var(--second-color), 1px -1px 0 var(--second-color),
+    -1px 1px 0 var(--second-color), 1px 1px 0 var(--second-color);
 }
 
 h2::after {
-    bottom: -2rem;
-    left: -2vw;
+  bottom: -2rem;
+  left: -2vw;
 }
 
 h2::before {
-    bottom: 2rem;
-    left: 1vw;
+  bottom: 2rem;
+  left: 1vw;
 }
 
 .title {
-    margin: 50px 50px;
-    position: relative;
+  margin: 50px 50px;
+  position: relative;
 }
 
-.title::after{
-    content: "";
-    width: 50%;
-    margin-bottom: 20px;
-    margin-left: 20px;
+.title::after {
+  content: "";
+  width: 50%;
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 
-.title:has(.primary)::after{
-    border-bottom: var(--primary-color) 3px solid;
+.title:has(.primary)::after {
+  border-bottom: var(--primary-color) 3px solid;
 }
 
-.title:has(.second)::after{
-    border-bottom: var(--second-color) 3px solid;
+.title:has(.second)::after {
+  border-bottom: var(--second-color) 3px solid;
 }
 
 /*Small devices*/
 @media only screen and (max-width: 576px) {
+  .title span {
+    position: absolute;
+    bottom: 0;
+    right: -60px;
+  }
 
-    .title span {
-        position: absolute;
-        bottom: 0;
-        right: -60px;
-    }
-
-    .title {
-        margin: 50px 10px;
-    }
+  .title {
+    margin: 50px 10px;
+  }
 }

@@ -9,23 +9,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 w-100 justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link active" [class.active]="activeSection === 'home'" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" [class.active]="activeSection === 'profile'" href="#profile">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" [class.active]="activeSection === 'portfolio'" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" [class.active]="activeSection === 'formation'" href="#formation">Formation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" [class.active]="activeSection === 'experience'" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" [class.active]="activeSection === 'contact'" href="#contact">Contact</a>
+                    <li class="nav-item" *ngFor="let nav of navbarSections">
+                        <a class="nav-link active" [class.active]="activeSection === nav.link" href="#{{nav.link}}">{{nav.title}}</a>
                     </li>
                 </ul>
             </div>
