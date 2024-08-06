@@ -12,8 +12,10 @@
   text-align: center;
   cursor: pointer;
   border-radius: 20px;
+  position: relative;
+  right: -35px;
   transform: rotate(90deg);
-  transition: transform 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-options {
@@ -46,6 +48,7 @@
 
 .language-menu.open .menu-button {
   transform: rotate(0deg);
+  right: 0;
 }
 
 .language-menu.open .menu-options {
