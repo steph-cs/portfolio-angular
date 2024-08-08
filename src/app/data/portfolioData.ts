@@ -4,6 +4,21 @@ export const portfolioData = {
     sectionId: 'portfolio',
     portfolioData: [
       {
+        status: 'In development',
+        linkImage: 'assets/img/portfolio/anne-limp.png',
+        title: 'AnneLimp',
+        description:
+          'AnneLimp is a React Native application for booking cleaning services. The app interacts with a backend developed in Node.js. This project is designed to practice and enhance skills in React Native and Node.js, focusing on app development, component creation, and API consumption.',
+        tecnologies: [
+          'React Native',
+          'TypeScript',
+          'Expo',
+          'React Native Paper',
+        ],
+        linkPage: '',
+        linkRepo: 'https://github.com/steph-cs/AnneLimp',
+      },
+      {
         status: '',
         linkImage: 'assets/img/portfolio/cat-care.png',
         title: 'Cat.Care',
@@ -85,6 +100,21 @@ export const portfolioData = {
     sectionTitle: 'portfólio',
     sectionId: 'portfolio',
     portfolioData: [
+      {
+        status: 'Em desenvolvimento',
+        linkImage: 'assets/img/portfolio/anne-limp.png',
+        title: 'AnneLimp',
+        description:
+          'AnneLimp é um aplicativo em React Native para agendamento de serviços de limpeza. O app interage com um backend desenvolvido em Node.js. Este projeto foi projetado para praticar e aprimorar habilidades em React Native e Node.js, com foco no desenvolvimento de aplicativos, criação de componentes e consumo de APIs.',
+        tecnologies: [
+          'React Native',
+          'TypeScript',
+          'Expo',
+          'React Native Paper',
+        ],
+        linkPage: '',
+        linkRepo: 'https://github.com/steph-cs/AnneLimp',
+      },
       {
         status: '',
         linkImage: 'assets/img/portfolio/cat-care.png',
