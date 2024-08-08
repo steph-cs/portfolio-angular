@@ -5,4 +5,5 @@ export interface timelineModel {
     description?: string
     institution: string,
     duration: string
+    link?: string
 }

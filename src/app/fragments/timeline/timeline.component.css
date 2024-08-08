@@ -1,113 +1,130 @@
 main {
-    position: relative;
+  position: relative;
 }
 
-
 .timeline-infos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 10px 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 10px 40px 30px;
 }
 
 .timeline-infos-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.timeline-infos:hover .doc {
+  bottom: -5px;
+  right: -5px;
+  z-index: 0;
+}
+.doc {
+  cursor: pointer;
+  border-radius: 100%;
+  box-shadow: var(--third-color) 2px 3px 8px;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  bottom: -10px;
+  right: -25px;
+  z-index: -1;
+  rotate: -25deg;
+  transition: all 0.5s ease-in-out;
 }
 
 .timeline-logo {
-    border-radius: 100%;
-    box-shadow: var(--third-color) 2px 3px 8px;
-    padding: 10px;
-    width: 80px;
-    height: 80px;
-    margin: 10px 0;
-    overflow: hidden;
+  border-radius: 100%;
+  box-shadow: var(--third-color) 2px 3px 8px;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  margin: 10px 0;
+  overflow: hidden;
+  background-color: var(--second-color);
 }
 
-
 .timeline-date {
-    background-color: var(--primary-color);
-    margin: 15px 15px 15px 0;
-
+  background-color: var(--primary-color);
+  margin: 15px 15px 15px 0;
 }
 
 .timeline-duration {
-    border: 1px var(--primary-color) solid;
+  border: 1px var(--primary-color) solid;
 }
 
 .timeline-date,
 .timeline-duration {
-    width: fit-content;
-    height: fit-content;
+  width: fit-content;
+  height: fit-content;
 }
 
 @media screen and (min-width: 992px) {
+  .square {
+    display: block;
+    background-color: var(--primary-color);
+    width: 32px;
+    height: 32px;
+    rotate: 45deg;
+  }
 
-    .square {
-        display: block;
-        background-color: var(--primary-color);
-        width: 32px;
-        height: 32px;
-        rotate: 45deg;
-    }
+  .middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .middle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  main .middle::before {
+    z-index: -1;
+    left: 50%;
+    top: 0;
+    content: "";
+    border-left: 2px var(--primary-color) dashed;
+    height: 100%;
+    width: 2px;
+    position: absolute;
+  }
 
-    main .middle::before {
-        z-index: -1;
-        left: 50%;
-        top: 0;
-        content: "";
-        border-left: 2px var(--primary-color) dashed;
-        height: 100%;
-        width: 2px;
-        position: absolute;
-    }
+  .timeline-infos {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+  }
 
-    .timeline-infos {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: start;
-    }
+  .timeline-infos:nth-child(odd) {
+    flex-direction: row-reverse;
+    text-align: end;
+  }
 
-    .timeline-infos:nth-child(odd) {
-        flex-direction: row-reverse;
-        text-align: end;
-    }
+  .timeline-infos:nth-child(odd) .timeline-infos-col {
+    flex-direction: row-reverse;
+    justify-content: start;
+  }
 
-    .timeline-infos:nth-child(odd) .timeline-infos-col{
-        flex-direction: row-reverse;
-        justify-content: start;
-    }
+  .timeline-infos:nth-child(odd) .timeline-duration {
+    float: right;
+  }
 
-    .timeline-infos:nth-child(odd) .timeline-duration{
-        float: right;
-    }
+  .timeline-infos:nth-child(odd) .logo-col {
+    justify-content: start;
+  }
 
-    .timeline-infos:nth-child(odd) .logo-col{
-        justify-content: start;
-    }
+  .timeline-infos-col {
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+  }
 
-    .timeline-infos-col {
-        flex-direction: row;
-        justify-content: end;
-        align-items: center;
-    }
+  .date-col {
+    display: flex;
+    justify-content: space-around;
+  }
 
-    .date-col {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .logo-col {
-        display: flex;
-        justify-content: flex-end;
-    }
+  .logo-col {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

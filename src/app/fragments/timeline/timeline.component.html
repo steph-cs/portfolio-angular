@@ -1,29 +1,49 @@
 <section [id]="timelineId" class="timeline">
-    <app-title [title]="timelineTitle"></app-title>
+  <app-title [title]="timelineTitle"></app-title>
 
-    <main class="w-100 px-3 ">
-        <div class="middle">
-            <span class="square"></span>
-        </div>
-        <div *ngFor="let timeline of timelineData; let i = index" class="timeline-infos">
+  <main class="w-100 px-3">
+    <div class="middle">
+      <span class="square"></span>
+    </div>
+    <div
+      *ngFor="let timeline of timelineData; let i = index"
+      class="timeline-infos"
+    >
+      <div class="col logo-col position-relative">
+        <a *ngIf="timeline.link"
+          class="doc position-relative d-flex justify-content-center align-items-center text-white"
+          href="{{timeline.link}}"
+          target="_blank"
+        >
+          <i class="fa-solid fa-file-lines"></i>
+        </a>
 
-            <div class="col logo-col">
-                <div class=" timeline-logo d-flex justify-content-center align-items-center">
-                    <img [src]="'assets/img/timeline/'+timeline.logo+'-logo.png'" [alt]="timeline.logo"
-                        width="50px">
-                </div>
-            </div>
-            <div class="col date-col">
-                <div class="timeline-date text-white rounded-pill px-4 py-2">{{timeline.data}}</div>
-            </div>
-            <div class="timeline-infos-text col">
-                <p class="fw-bold">{{timeline.title}}</p>
-                <p>{{timeline.institution}}</p>
-                <div *ngIf="timeline.description">{{timeline.description}}
-                </div>
-                <div *ngIf="timeline.duration" class="rounded px-2 py-1 timeline-duration">{{timeline.duration}}
-                </div>
-            </div>
+        <div
+          class="timeline-logo d-flex justify-content-center align-items-center"
+        >
+          <img
+            [src]="'assets/img/timeline/' + timeline.logo + '-logo.png'"
+            [alt]="timeline.logo"
+            width="50px"
+          />
         </div>
-    </main>
+      </div>
+      <div class="col date-col">
+        <div class="timeline-date text-white rounded-pill px-4 py-2">
+          {{ timeline.data }}
+        </div>
+      </div>
+      <div class="timeline-infos-text col">
+        <p class="fw-bold">{{ timeline.title }}</p>
+        <p>{{ timeline.institution }}</p>
+        <div *ngIf="timeline.description">{{ timeline.description }}</div>
+        <div
+          *ngIf="timeline.duration"
+          class="rounded px-2 py-1 timeline-duration"
+        >
+          {{ timeline.duration }}
+        </div>
+      </div>
+    </div>
+  </main>
 </section>

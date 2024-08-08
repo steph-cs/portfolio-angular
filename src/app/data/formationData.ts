@@ -11,11 +11,20 @@ export const formationData = {
         duration: '',
       },
       {
+        logo: 'banco-pan',
+        data: 'NOV 2023 - JAN 2024',
+        title: 'Degree in Information Systems',
+        institution: 'Universidade Federal de Santa Catarina - UFSC',
+        duration: '68hrs',
+        link: 'https://hermes.dio.me/certificates/0AF406E8.pdf'
+      },
+      {
         logo: 'ifood',
-        data: 'MAI 2023 - APR 2023',
+        data: 'MAR 2023 - APR 2023',
         title: 'Bootcamp Power Tech Angular Developer - Powered by iFood',
         institution: 'Digital Innovation One - DIO',
         duration: '75 hrs',
+        link: 'https://hermes.dio.me/certificates/54D3F084.pdf'
       },
       {
         logo: 'iuul',
@@ -39,11 +48,20 @@ export const formationData = {
         duration: '',
       },
       {
+        logo: 'banco-pan',
+        data: 'NOV 2023 - JAN 2024',
+        title: 'Bootcamp Desenvolvimento Frontend com Angular - Powered by Banco Pan',
+        institution: 'Digital Innovation One - DIO',
+        duration: '68hrs',
+        link: 'https://hermes.dio.me/certificates/0AF406E8.pdf'
+      },
+      {
         logo: 'ifood',
-        data: 'MAI 2023 - ABR 2023',
+        data: 'MAR 2023 - ABR 2023',
         title: 'Bootcamp Power Tech Angular Developer - Powered by iFood',
         institution: 'Digital Innovation One - DIO',
         duration: '75 hrs',
+        link: 'https://hermes.dio.me/certificates/54D3F084.pdf'
       },
       {
         logo: 'iuul',
